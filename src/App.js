@@ -51,25 +51,35 @@ export default class App extends Component {
       <div>
         
         <Row className="justify-content-md-center">
-        <h1>¯\_(ツ)_/¯  CAMEL VS DINOSAURS ¯\_(ツ)_/¯ </h1>
-        {
-          (this.state.user)
-          ? this.state.user.name
-          :  <FacebookLogin
-          autoLoad={false}
-          appId="206175450381158"
-          fields="name,email,picture"
-          callback={(resp) => this.responseFacebook(resp)}
-        />
-        }
+        <Col></Col>
+        <Col xs={12} md={8}>
+        <h1>CAMEL VS DINOSAURS</h1>
+        </Col>
+        <Col>
+          <div>
+          {
+            (this.state.user)
+            ? this.state.user.name
+            :<FacebookLogin className="facebook"
+            autoLoad={false}
+            appId="206175450381158"
+            fields="name,email,picture"
+            callback={(resp) => this.responseFacebook(resp)}
+          />
+          }
+
+          </div>
+        </Col>
+        
+        
         
         </Row>
 
         <Row>
-        <Col>
-          <Container className="history">
+        <Col sm={2}>
+          <Container>
           <div className="toprank">
-            <h2>TOP FIGHTER:</h2>
+            <h2>TOP:</h2>
               {this.state.topRank!==null ?this.state.topRank.map (item => {
                       return(
                       <div>{item.player}, {item.score}</div>
@@ -80,8 +90,8 @@ export default class App extends Component {
           </Container>
         </Col>
         
-        <Col>
-          <Container fluid>
+        <Col fluid sm={8} className="justify-content-md-center">
+          <Container >
           <div className="game">
             <Board {...this.state} setTheState={this.setTheState} />  {/* <Board square={this.state.squares} isXNext={this.state.isXNext}/> */}
             </div>
@@ -90,7 +100,7 @@ export default class App extends Component {
           <img src="https://alienmelon.gamejolt.io/images/IMG_FIRE01.gif"/>
         </div>
           </Col>
-          <Col>
+          <Col sm={2}>
             <div className="history">
           {this.state.history.map ((item,index) =>{
             return <Button className="button" variant="light" onClick={()=>this.timeTravel(index)}>Move {index+1}</Button>
