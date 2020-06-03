@@ -1,7 +1,7 @@
 .box{
   width: 200px;
   height: 200px;
-  color: white;
+  border: 1px solid white;
   z-index: 99999;
 }
 
@@ -31,10 +31,11 @@ h1{
   display: flex;
   justify-content: center;
   color: white;
+  margin-top: 3rem;
  }
 
 .game{
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
 }
@@ -46,4 +47,22 @@ h1{
   margin-top: -20rem;
   display: flex;
   justify-content: center;
+}
+
+.history{
+ 
+  margin: 20px;
+  margin-top: 5rem;
+  
+}
+
+.button{
+  margin: 10px;
+
+}
+
+.toprank{
+  display: flex;
+  flex-direction: column;
+  margin: 4rem;
 }
