@@ -68,3 +68,22 @@ h1{
   
 }
 
+.kep-login-facebook .metro{
+  font-family: Helvetica,sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: calc(.27548vw + 12.71074px);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color .3s,border-color .3s;
+   
+    border: calc(.06887vw + .67769px) solid #4c69ba;
+
+}
+
+.fighter{
+  text-align: center;
+}

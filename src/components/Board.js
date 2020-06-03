@@ -95,7 +95,7 @@ export default class Board extends Component {
         status = <div>WINNER IS  <img src={this.props.winner} width="60"/>  GAME OVER! </div>
         } else {
            
-            status = <div>NEXT FIGHTER IS‿︵‿︵‿︵‿{this.props.isXNext? <img src={X} width="60"/> : <img src={O} width="60"/>}‿︵‿︵‿︵‿</div>
+            status = <div className="fighter">NEXT FIGHTER IS‿︵‿︵‿︵‿{this.props.isXNext? <img src={X} width="60"/> : <img src={O} width="60"/>}‿︵‿︵‿︵‿</div>
         }
         console.log(this.props.topRank)
 
